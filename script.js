@@ -70,7 +70,7 @@ function Start() {
     setValue();
 }
 function HelpMethod() {
-    setTimeout(setValue, 1000);
+    setTimeout(setValue, 985);
 }
 const setValue = () => {
     if (!isTimerSwitchedOn) return;
