@@ -143,43 +143,6 @@ function Alarm() {
         })
     }
 }
-
-
-
-
-function HelpMethod() {
-    setTimeout(updataValue, 985);
-}
-const updataValue = () => {
-    if (!isTimerSwitchedOn) return;
-
-    UpdateTextTime()
-    timeValue--;
-    if (timeValue == -1)
-    {
-        if (isWork)
-        {
-            workCheal.style.color = "#43FF56";
-            workCheal.textContent = "Отдых"
-            timeValue = 300;
-            HelpMethod();
-        }
-        else
-        {
-            workCheal.style.color = "#FF4343";
-            workCheal.textContent = "Работа"
-            timeValue = 1500;
-            HelpMethod();
-        }
-        Alarm();
-        isWork = !isWork;
-        UpdateTextTime()
-    }
-    else
-    {
-        HelpMethod();
-    }
-}
 function UpdateTextTime() {
     if (timeValue % 60 < 10) {
         time.textContent = `${Math.floor(timeValue / 60)}:0${timeValue % 60}`;
